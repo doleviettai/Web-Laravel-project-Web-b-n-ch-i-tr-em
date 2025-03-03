@@ -1,0 +1,18 @@
+.custom-select {
+    appearance: none; /* Loại bỏ mũi tên mặc định của trình duyệt */
+    background: none; /* Xóa nền mặc định */
+    background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/solid/caret-down.svg'); /* Đường dẫn đến icon */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Căn phải mũi tên */
+    background-size: 16px 16px; /* Kích thước của biểu tượng */
+    padding-right: 30px; /* Đệm cho mũi tên */
+}
+
+.form-outline {
+    position: relative;
+}
+
+#category_id {
+    width: 100%; /* Đảm bảo thẻ select chiếm toàn bộ chiều rộng */
+    height: 100%; /* Tùy chỉnh chiều cao nếu cần */
+}

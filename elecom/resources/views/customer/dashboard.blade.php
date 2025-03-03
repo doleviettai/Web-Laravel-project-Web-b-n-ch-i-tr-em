@@ -1,0 +1,289 @@
+@extends('customer/layouts/layout')
+
+@section('customer_title')
+    Introduct Panel
+@endsection
+
+@section('customer_layout')
+
+
+    <section class="relative bg-hero-pattern bg-cover bg-center h-[500px] flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-white"></div>
+        <div class="container mx-auto z-10 text-center text-gray-800">
+            <h1 class="text-5xl font-bold">Chào mừng bạn đã đến với MyKingToys</h1>
+            <p class="mt-4 text-lg">Khám phá thế giới vui nhộn và trí tưởng tượng với đồ chơi độc quyền của chúng tôi!</p>
+            <div class="mt-8">
+                <a href="{{ route('customer.product') }}"
+                    class="bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-400 transition transform hover:no-underline hover:scale-125">Shop
+                    Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <!-- Phần trên: Thương hiệu -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-6 md:space-y-0">
+                <div class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-truck" viewBox="0 0 16 16">
+                        <path
+                            d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                    </svg>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Miễn phí giao hàng</h3>
+                        <p class="text-sm text-gray-500">Với đơn hàng trên 5,000,000đ</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                    </svg>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Thanh toán tối ưu</h3>
+                        <p class="text-sm text-gray-500">Bảo mật an toàn khi thanh toán</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                        class="bi bi-headset" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5" />
+                    </svg>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Hỗ trợ 24/7</h3>
+                        <p class="text-sm text-gray-500">Hỗ trợ tận tâm và nhiệt tình</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Phần dưới: Sản phẩm nổi bật -->
+            <div class="swiper-container">
+                <!-- Slides Wrapper -->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://lzd-img-global.slatic.net/g/p/f980c40c042cb40eae4d156180654f37.jpg_720x720q80.jpg"
+                            alt="Category Icon">
+                        <h3>Đồ chơi giáo dục</h3>
+                        <a href="{{ route('customer.product') }}">Khám phá</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{{ asset('admin_asset/img/photos/lego.png') }}" alt="Category Icon">
+                        <h3>Đồ chơi lắp ráp</h3>
+                        <a href="{{ route('customer.product') }}">Khám phá</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://cf.shopee.vn/file/2ed50c99df7be69c8216b313da159970" alt="Category Icon">
+                        <h3>Đồ chơi mô hình</h3>
+                        <a href="{{ route('customer.product') }}">Khám phá</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://salt.tikicdn.com/cache/w1200/ts/product/e2/3d/3b/6691cc43a0f2a3e162475986fe44faaf.jpg"
+                            alt="Category Icon">
+                        <h3>Đồ chơi búp bê</h3>
+                        <a href="{{ route('customer.product') }}">Khám phá</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://salt.tikicdn.com/ts/product/74/1a/2d/190f4d413bcf4efd0f9c4a9d24ca395d.png"
+                            alt="Category Icon">
+                        <h3>Đồ chơi điện tử</h3>
+                        <a href="{{ route('customer.product') }}">Khám phá</a>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+
+                <!-- Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+
+
+            <!-- Swiper JS -->
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+            <!-- Initialize Swiper -->
+            <script>
+                const swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3000, // Slide chuyển mỗi 3 giây
+                        disableOnInteraction: false,
+                    },
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                        },
+                    },
+                });
+            </script>
+        </div>
+
+
+        <section id="about-us" class="py-16 bg-white">
+            <div class="container mx-auto px-6 md:px-12 lg:px-24 text-center">
+                <h2 class="text-4xl font-bold text-gray-800">Nhà khởi xứng</h2>
+                <p class="mt-4 text-lg text-red-400 text-left">MYKINGTOYS</p><br>
+                <div class="content_about text-left">
+                    Câu chuyện của MyKingToys bắt đầu từ niềm đam mê cháy bỏng với thế giới tuổi thơ vào năm 2020. Được sáng
+                    lập bởi những con người trẻ đầy nhiệt huyết, MyKingToys mang trong mình sứ mệnh mang đến niềm vui và giá
+                    trị thực sự cho cộng đồng qua những món đồ chơi chất lượng, an toàn nhưng vẫn phù hợp với mọi ngân
+                    sách.<br><br>
+
+                    Chúng tôi tin rằng, thế giới của trẻ thơ luôn cần được tô điểm bởi những khoảnh khắc vui vẻ, sáng tạo và
+                    đầy ý nghĩa. Chính vì thế, MyKingToys không ngừng nỗ lực để sáng tạo nên những sản phẩm đồ chơi không
+                    chỉ đẹp mắt mà còn giúp trẻ em phát triển toàn diện về trí tuệ, kỹ năng và cảm xúc. <br><br>
+
+                    Mỗi món đồ chơi của MyKingToys đều được chăm chút từ ý tưởng đến chất lượng, để mỗi lần trẻ em cầm trên
+                    tay là một lần niềm vui lan tỏa. Không chỉ mang lại nụ cười cho các bé, MyKingToys còn là cầu nối giúp
+                    gia đình gắn kết, sẻ chia những giây phút tuyệt vời bên nhau.
+
+                    Hãy để MyKingToys đồng hành cùng tuổi thơ của bé – nơi những ước mơ được chắp cánh và những kỷ niệm đáng
+                    nhớ được khắc sâu mãi mãi!
+                </div>
+                <div class="flex flex-col md:flex-row mt-12 space-y-8 md:space-y-0 md:space-x-8">
+                    <div class="bg-cyan-100 p-6 rounded-lg shadow-md flex-1">
+                        <h3 class="text-2xl font-semibold text-cyan-600">Sứ mệnh chúng tôi</h3>
+                        <p class="mt-4 text-gray-600">Sứ mệnh của chúng tôi là cung cấp đồ chơi chất lượng cao nuôi dưỡng sự sáng tạo, học tập và niềm vui. Chúng tôi tận tâm tạo ra những sản phẩm truyền cảm hứng cho trẻ em khám phá và
+                            học hỏi thông qua trò chơi.</p>
+                    </div>
+                    <div class="bg-cyan-100 p-6 rounded-lg shadow-md flex-1">
+                        <h3 class="text-2xl font-semibold text-cyan-600">Giá trị chúng tôi</h3>
+                        <p class="mt-4 text-gray-600">Chúng tôi tin vào chất lượng, tính toàn vẹn và sự đổi mới. Các giá trị của chúng tôi hướng dẫn chúng tôi tạo ra những đồ chơi an toàn, bền vững và thú vị, mang lại giá trị cho cả cha mẹ và trẻ em.
+                        </p>
+                    </div>
+                    <div class="bg-cyan-100 p-6 rounded-lg shadow-md flex-1">
+                        <h3 class="text-2xl font-semibold text-cyan-600">Nhóm của chúng tôi</h3>
+                        <p class="mt-4 text-gray-600">Chúng tôi là một nhóm các nhà thiết kế, kỹ sư và nhà giáo dục đầy nhiệt huyết, những người cam kết tạo ra những món đồ chơi tốt nhất cho trẻ em. Chúng tôi làm việc chăm chỉ mỗi ngày để đưa những ý tưởng mới vào cuộc sống.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+@endsection
+
+
+@section('customer_footer')
+    <footer class=" body-font bg-gradient-to-r from-cyan-500 to-blue-200 text-white">
+        <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                    <img src="{{ asset('admin_asset/img/photos/blocks.png') }}" class="h-20 w-20" alt="logo" />
+                    <p class="max-w-xs mt-4 text-sm  text-white">
+                        Mọi chi tiết xin liên hệ
+                    </p>
+                    <div class="flex mt-8 space-x-6  text-white">
+                        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                            <span class="sr-only"> Facebook </span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fillRule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clipRule="evenodd" />
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                            <span class="sr-only"> Instagram </span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fillRule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clipRule="evenodd" />
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                            <span class="sr-only"> Twitter </span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                            <span class="sr-only"> GitHub </span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fillRule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    clipRule="evenodd" />
+                            </svg>
+                        </a>
+                        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                            <span class="sr-only"> Dribbble </span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fillRule="evenodd"
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                                    clipRule="evenodd" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4 text-white">
+                    <div>
+                        <p class="font-medium">
+                            Company
+                        </p>
+                        <nav class="flex flex-col mt-4 space-y-2 text-sm  text-white">
+                            <a class="hover:opacity-75" href> About </a>
+                            <a class="hover:opacity-75" href> Meet the Team </a>
+                            <a class="hover:opacity-75" href> History </a>
+                            <a class="hover:opacity-75" href> Careers </a>
+                        </nav>
+                    </div>
+                    <div>
+                        <p class="font-medium">
+                            Services
+                        </p>
+                        <nav class="flex flex-col mt-4 space-y-2 text-sm  text-white">
+                            <a class="hover:opacity-75" href> 1on1 Coaching </a>
+                            <a class="hover:opacity-75" href> Company Review </a>
+                            <a class="hover:opacity-75" href> Accounts Review </a>
+                            <a class="hover:opacity-75" href> HR Consulting </a>
+                            <a class="hover:opacity-75" href> SEO Optimisation </a>
+                        </nav>
+                    </div>
+                    <div>
+                        <p class="font-medium">
+                            Helpful Links
+                        </p>
+                        <nav class="flex flex-col mt-4 space-y-2 text-sm  text-white">
+                            <a class="hover:opacity-75" href> Contact </a>
+                            <a class="hover:opacity-75" href> FAQs </a>
+                            <a class="hover:opacity-75" href> Live Chat </a>
+                        </nav>
+                    </div>
+                    <div>
+                        <p class="font-medium">
+                            Legal
+                        </p>
+                        <nav class="flex flex-col mt-4 space-y-2 text-sm  text-white">
+                            <a class="hover:opacity-75" href> Privacy Policy </a>
+                            <a class="hover:opacity-75" href> Terms &amp; Conditions </a>
+                            <a class="hover:opacity-75" href> Returns Policy </a>
+                            <a class="hover:opacity-75" href> Accessibility </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-8 text-xs  text-white">
+                © 2022 Comany Name
+            </p>
+        </div>
+    </footer>
+@endsection
